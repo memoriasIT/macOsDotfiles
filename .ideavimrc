@@ -1,0 +1,31 @@
+""   _____    _                  _
+""   \_   \__| | ___  __ ___   _(_)_ __ ___
+""    / /\/ _` |/ _ \/ _` \ \ / / | '_ ` _ \
+"" /\/ /_| (_| |  __/ (_| |\ V /| | | | | | |
+"" \____/ \__,_|\___|\__,_| \_/ |_|_| |_| |_|
+"" @ Lorenzo's ideaVimrc - 2022
+
+""" General vim stuff      ------------------
+set number relativenumber
+
+xnoremap ms :'<,'>sort<cr>
+
+""" Idea specific settings ------------------
+nnoremap mn :action GotoNextError<CR>
+nnoremap mp :action GotoPreviousError<CR>
+
+" gd -> Go declaration
+" gi -> Go implementation
+nmap gi :action GotoImplementation<CR>
+
+""" Plugins              ------------------
+Plug 'preservim/nerdtree'                   " Project and file navigation
+Plug 'tpope/vim-surround'
+Plug 'terryma/vim-multiple-cursors'
+
+"""  >      Plugin settings  ---------------
+nmap n :NERDTreeToggle<CR>
+" cmd + n -> create file
+
+""" Random changes       ------------------
+set ideastatusicon=gray
